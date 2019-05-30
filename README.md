@@ -5,18 +5,19 @@ Written in Standard Library using Turtle graphics.
 
 Features
 
-Randomly generated maps (terrains, pickups and ghosts)  
+1)Randomly generated maps (terrains, pickups and ghosts)  
 
-Onscreen stats (Armour) 
+2)Onscreen stats (Armour) 
 
-spacewars shooter style action 
+3) spacewars shooter style action 
 
-pvp 
+4) pvp 
 
-Sound effects
+5) Sound effects
 
-Game over screen
-8 bits pixel graphics
+6) Game over screen
+
+7) 8 bits pixel graphics
 
 
 All graphics created using GraphicsGale and lospec.com/pixel-editor
