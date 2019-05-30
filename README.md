@@ -6,10 +6,15 @@ Written in Standard Library using Turtle graphics.
 Features
 
 Randomly generated maps (terrains, pickups and ghosts)  
+
 Onscreen stats (Armour) 
+
 spacewars shooter style action 
+
 pvp 
+
 Sound effects
+
 Game over screen
 8 bits pixel graphics
 
