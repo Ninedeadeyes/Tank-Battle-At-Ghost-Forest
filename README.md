@@ -1,6 +1,6 @@
 # Tank-Battle-At-Ghost-Forest-PVP
 
-Written in Standard Library. 
+Written in Standard Library using Turtle graphics. 
 
 
 Features
