@@ -24,4 +24,7 @@ All graphics created using GraphicsGale and lospec.com/pixel-editor
 
 All sounds downloaded from https://freesound.org
 
-To play without python download all files and then click the exe file. 
+To play without python download all files and then click the exe file.
+
+
+Special Thanks to Christian Thompson
