@@ -5,9 +5,9 @@ Written in Standard Library using Turtle graphics.
 
 Features
 
-1)Randomly generated maps (terrains, pickups and ghosts)  
+1) Randomly generated maps (terrains, pickups and ghosts)  
 
-2)Onscreen stats (Armour) 
+2) Onscreen stats (Armour) 
 
 3) spacewars shooter style action 
 
