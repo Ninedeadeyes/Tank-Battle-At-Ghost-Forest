@@ -1,4 +1,4 @@
-# Tank-Battle-At-Ghost-Forest-PVP
+# Tank-Battle-At-Ghost-Forest
 
 Written in Standard Library using Turtle graphics. 
 
