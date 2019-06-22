@@ -280,8 +280,12 @@ for i in range(maxenemies):
     enemies.append(Enemy("ghost.gif", "white",0, 0))
 
 particles = []
-for i in range(20):
-        particles.append(Particle("circle", "orange", 0, 0))
+
+for i in range(10):
+        particles.append(Particle("circle", "red", 0, 0))
+        
+for i in range(10):
+        particles.append(Particle("circle", "yellow", 0, 0))
     
 #Create game object
 game = Game()
