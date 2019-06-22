@@ -383,7 +383,7 @@ while True:
             life2.update_lives2()
             winsound.PlaySound("gasp.wav", winsound.SND_ASYNC)
 
-            for particle in particles:
+            for particle in particles2:
                 particle.explode(player2.xcor(),player2.ycor())
             
 
