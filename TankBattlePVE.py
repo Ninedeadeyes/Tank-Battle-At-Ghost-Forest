@@ -4,7 +4,7 @@ import random
 import winsound
 import time 
 
-images=["rock.gif","tree.gif","health.gif","ghost.gif","fire1.gif","background.gif"]
+images=["rock.gif","tree.gif","health.gif","ghost.gif","fire1.gif","background.gif","diamond.gif"]
 
 for image in images:
     turtle.register_shape(image)
@@ -16,9 +16,11 @@ turtle.title("Tank Battle at Ghost Forest")
 turtle.bgcolor("black")
 turtle.bgpic("background.gif")
 #This saves memory
-turtle.setundobuffer(1)
+turtle.setundobuffer(0)
 #This speeds up drawing
 turtle.tracer(0)
+
+
 
 
 class Pen(turtle.Turtle):
@@ -99,19 +101,19 @@ class Sprite(turtle.Turtle):
         #Boundary detection
         if self.xcor() > 390:
             self.setx(390)
-            self.rt(90)
+            self.rt(135)
         
         if self.xcor() < -390:
             self.setx(-390)
-            self.rt(90)
+            self.rt (135)
         
         if self.ycor() > 390:
             self.sety(390)
-            self.rt(90)
+            self.rt (135)
         
         if self.ycor() < -390:
             self.sety(-390)
-            self.rt(90)
+            self.rt (135)
             
     def is_collision(self, other):
         if (self.xcor() >= (other.xcor() - 20)) and \
@@ -143,10 +145,18 @@ class Player(Sprite):
        
 
     def accelerate(self):
-        self.speed = 1 
+        if self.speed==2:
+            pass
+        else:
+            self.speed += 1 
         
     def decelerate(self):
-        self.speed = 0
+        if self.speed == -1:
+            pass
+        else:
+            self.speed -= 1
+            
+            
 
 
         
@@ -207,13 +217,19 @@ class Particle(Sprite):
             self.fd(10)
             self.frame += 1
 
-        if self.frame > 15:
+        if self.frame > 30:
             self.frame = 0
             self.goto(-1000, -1000)
 
 
 
 class Shield(Sprite):
+    def __init__(self, spriteshape, color, startx, starty):
+        Sprite.__init__(self, spriteshape, color, startx, starty)
+        self.speed = 2
+
+
+class Diamond(Sprite):
     def __init__(self, spriteshape, color, startx, starty):
         Sprite.__init__(self, spriteshape, color, startx, starty)
         self.speed = 2
@@ -242,7 +258,7 @@ class Game():
         self.pen.ht()
 
 
-maxtree = random.randint(20,30)
+maxtree = random.randint(20,35)
 tree = []
     
 for tre in range (maxtree):
@@ -253,7 +269,7 @@ for tre in range (maxtree):
     tree[tre].speed(0)
     tree[tre].setposition(random.randint(-360,360),random.randint(-360,360))
 
-maxrock = random.randint(12,20)
+maxrock = random.randint(15,25)
 rock = []
     
 for roc in range (maxrock):
@@ -265,19 +281,23 @@ for roc in range (maxrock):
     rock[roc].setposition(random.randint(-360,360),random.randint(-360,360))
 
 
-
-maxshield = random.randint(4,6)
-shield=[]
-
+diamond=[]
     
+for dia in range(1):
+    diamond.append(Diamond("diamond.gif","red",random.randint(-370,370),random.randint(-370,370)))
+
+maxshield = random.randint(2,4)
+shield=[]
+  
 for shi in range (maxshield):
-    shield.append(Shield("health.gif","red",random.randint(-360,370),random.randint(-360,370)))
+    shield.append(Shield("health.gif","red",random.randint(-370,370),random.randint(-370,370)))
    
-maxenemies= random.randint(10,20)
+maxenemies= random.randint(10,16)
 
 enemies =[]
 for i in range(maxenemies):
     enemies.append(Enemy("ghost.gif", "white",0, 0))
+    enemies[i].setposition(random.randint(-300,300),random.randint(-300,300))
 
 particles = []
 
@@ -342,6 +362,10 @@ while True:
 
             for particle in particles:
                 particle.explode(player1.xcor(), player1.ycor())
+
+        for shi in range (maxshield):
+            if shield[shi].is_collision(enemy):
+                enemy.rt(45)
            
 
 
@@ -389,6 +413,18 @@ while True:
            player1.health+=100
            life1.update_lives1()
            winsound.PlaySound("health.wav", winsound.SND_ASYNC)
+
+    for dia in range (1):
+        if player1.is_collision(diamond[dia]):
+           x = random.randint(-390, 390)
+           y = random.randint(-390, 390)
+           diamond[dia].goto(x, y)
+           player1.points+=100
+           points1.update_points1()
+           winsound.PlaySound("win.wav", winsound.SND_ASYNC)
+
+
+            
  
 
     if player1.health<=0:
