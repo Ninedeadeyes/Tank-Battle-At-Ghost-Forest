@@ -26,9 +26,4 @@ All sounds downloaded from https://freesound.org
 
 To play without python download all files and then click the exe file.
 
-22/06/2019 updated
-
-clean up the code,bugs etc etc,  created a PVE version of game 
-
-
 Special Thanks to Christian Thompson ( Youtuber)
