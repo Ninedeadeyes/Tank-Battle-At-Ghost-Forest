@@ -38,8 +38,9 @@ class Pen(turtle.Turtle):
         self.write(msg, font=("Arial", 16, "normal"))
 
     def show_rules(self):
+        self.ht()
+        self.up()
         msg = ("Controls: ArrowKeys, Fire=Spacebar ")
-        self.penup()
         self.goto(-200, -450)
         self.color("white")
         self.write(msg, font=("Arial", 16, "normal"))
