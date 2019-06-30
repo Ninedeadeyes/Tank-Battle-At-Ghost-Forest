@@ -9,7 +9,7 @@ Features
 
 2) Onscreen stats (Armour) 
 
-3) spacewars shooter style action 
+3) Shootem up style action 
 
 4) pvp and pve version 
 
