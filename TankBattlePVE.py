@@ -287,7 +287,7 @@ diamond=[]
 for dia in range(1):
     diamond.append(Diamond("diamond.gif","red",random.randint(-370,370),random.randint(-370,370)))
 
-maxshield = random.randint(2,4)
+maxshield = random.randint(5,8)
 shield=[]
   
 for shi in range (maxshield):
