@@ -164,7 +164,7 @@ class Player(Sprite):
 class Enemy(Sprite):
     def __init__(self, spriteshape, color, startx, starty):
         Sprite.__init__(self, spriteshape, color, startx, starty)
-        self.speed = 3
+        self.speed = 2
         self.setheading(random.randint(0,360))
 
 
