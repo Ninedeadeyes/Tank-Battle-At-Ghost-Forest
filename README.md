@@ -2,6 +2,7 @@
 
 Written in Standard Library using Turtle graphics. 
 
+Click game.py to play
 
 Features
 
@@ -11,7 +12,7 @@ Features
 
 3) Shootem up style action 
 
-4) pvp and pve version 
+4) pvp and pve options 
 
 5) Sound effects
 
