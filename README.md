@@ -2,7 +2,7 @@
 
 Written in Standard Library using Turtle graphics. 
 
-Click game.py to play
+Click game.py or game.exe to play
 
 Features
 
