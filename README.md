@@ -28,3 +28,7 @@ All sounds downloaded from https://freesound.org
 To play without python download all files and then click the exe file.
 
 Special Thanks to Christian Thompson ( Youtuber)
+
+Check out my other Python Games at 
+
+https://ninedeadeyes.github.io/Python-Game-Gallery/
